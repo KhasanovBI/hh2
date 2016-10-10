@@ -1,9 +1,8 @@
 from __future__ import division
 
+import math
 import sys
 from collections import namedtuple
-
-import math
 
 
 class SplitNumber:
