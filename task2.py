@@ -73,6 +73,10 @@ class InfinitySequenceSolver:
             return number_shift_pair
 
     def check_combination_to_zero_start_numbers(self, split_combination):
+        left_split_number = split_combination[0]
+        if (left_split_number.number_len == left_split_number.divider and
+                left_split_number.number_str.startswith('0')):
+            return False
         for i in range(1, len(split_combination)):
             if split_combination[i].number_str.startswith('0'):
                 return False
@@ -96,6 +100,7 @@ class InfinitySequenceSolver:
                 number_shift_pair = self.check_combination(split_combination)
                 if number_shift_pair:
                     good_number_shift_pairs.append(number_shift_pair)
+        print(good_number_shift_pairs)
         return good_number_shift_pairs
 
     def get_closest_number_shift_pair(self, string):
