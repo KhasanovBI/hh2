@@ -100,7 +100,6 @@ class InfinitySequenceSolver:
                 number_shift_pair = self.check_combination(split_combination)
                 if number_shift_pair:
                     good_number_shift_pairs.append(number_shift_pair)
-        print(good_number_shift_pairs)
         return good_number_shift_pairs
 
     def get_closest_number_shift_pair(self, string):
